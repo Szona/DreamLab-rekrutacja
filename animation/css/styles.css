@@ -1,0 +1,43 @@
+.circle-box {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.circle-box__circle {
+  width: 20px;
+  height: 20px;
+  background-color: #e6e6e6;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.circle-box__circle--active {
+  width: 80px;
+  height: 80px;
+  background-color: #70db70;
+  position: relative;
+}
+.circle-box__circle--active::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-right: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 40%;
+  left: 35%;
+}
+.circle-box__circle--done::before {
+  content: "";
+  width: 8px;
+  height: 20px;
+  border-right: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 33%;
+  left: 45%;
+}
