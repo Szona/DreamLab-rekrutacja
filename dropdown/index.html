@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="app/app.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+    <title>Dropdown</title>
+</head>
+<body>
+    <form class="dropdown">
+        <p class="dropdown__select">All sources <span class="dropdown__select__arrow"></span> </p>
+        <ul class="dropdown__select__list">
+            <li class="list-item dropdown__select__list__item">
+                <input class="radio-btn dropdown__select__list__item__btn" type="radio" id="all" name="source" value="all" checked>
+                <label class="dropdown__select__list__item__label default" for="all">All sources</label>
+            </li>
+            <li class="list-item dropdown__select__list__item">
+                <input class="radio-btn dropdown__select__list__item__btn" type="radio" id="dropbox" name="source" value="dropbox">
+                <label class="dropdown__select__list__item__label" for="dropbox">Dropbox</label>
+                <span class="dropdown__select__list__item__label--emial">konstantin@metlab.co</span>
+            </li>
+            <li class="list-item dropdown__select__list__item">
+                <input class="radio-btn dropdown__select__list__item__btn" type="radio" id="google-drive" name="source" value="google-drive">
+                <label class="dropdown__select__list__item__label" for="google-drive">Google Drive </label>
+                <span class="dropdown__select__list__item__label--emial">konstantin@abc.com</span>
+            </li>
+            <li class="list-item dropdown__select__list__legend">Manage your sources</li>
+        </ul>
+    </form>
+    
+</body>
+</html>
