@@ -6,7 +6,7 @@ $(document).ready(function () {
 
     select.click(function() {
         arrow.toggleClass("dropdown__select__arrow--open");
-        selectMenu.css("visibility", "visible");
+        selectMenu.toggleClass("display");
     });
 
 
