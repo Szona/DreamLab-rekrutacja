@@ -2,20 +2,22 @@
   width: 200px;
   height: 200px;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  position: relative;
 }
 .circle-box__circle {
   width: 20px;
   height: 20px;
+  display: inline-block;
   background-color: #e6e6e6;
   border-radius: 100%;
   cursor: pointer;
+  position: absolute;
+  top: 50%;
 }
 .circle-box__circle--active {
   width: 80px;
   height: 80px;
+  border-radius: 100%;
   background-color: #70db70;
   position: relative;
 }
@@ -29,6 +31,7 @@
   position: absolute;
   top: 40%;
   left: 35%;
+  transition: all 0.25s;
 }
 .circle-box__circle--done::before {
   content: "";
@@ -40,4 +43,70 @@
   position: absolute;
   top: 33%;
   left: 45%;
+}
+.one {
+  left: 0%;
+}
+.one.step1 {
+  animation: one-step1-active 0.25s forwards ease;
+}
+.one.step2 {
+  animation: one-step2-active 0.25s forwards ease;
+}
+.two {
+  top: 66%;
+  left: 50%;
+}
+.two.step1 {
+  animation: two-step1 0.25s forwards ease;
+}
+.three {
+  top: 66%;
+  left: 80%;
+}
+.three.step1 {
+  animation: three-step1 0.25s forwards ease;
+}
+.three.step2 {
+  animation: three-step2 0.25s forwards ease;
+}
+@keyframes one-step1-active {
+  from {
+    left: 0;
+  }
+  to {
+    left: 35%;
+  }
+}
+@keyframes one-step2-active {
+  from {
+    left: 35%;
+  }
+  to {
+    left: 70%;
+  }
+}
+@keyframes two-step1 {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 15%;
+  }
+}
+@keyframes three-step1 {
+  from {
+    left: 80%;
+  }
+  to {
+    left: 86%;
+  }
+}
+@keyframes three-step2 {
+  from {
+    left: 86%;
+  }
+  to {
+    left: 42%;
+  }
 }
