@@ -45,6 +45,7 @@ body {
   transform: rotate(0deg);
 }
 .dropdown__select__list {
+  visibility: hidden;
   height: 300px;
   background-color: #F7F8FC;
   border: 1px solid #B3B3BF;
